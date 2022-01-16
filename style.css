@@ -347,7 +347,7 @@ template {
 
 .about-page {
   padding: 80px 0 80px;
-  background-image: url(/assets/images/about-background.jpg);
+  background-image: url(assets/images/about-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
