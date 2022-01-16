@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?ver=1.0">
     <title>Document</title>
 </head>
 <body>
@@ -34,7 +34,7 @@
                 </div>
             </div>
         </section>
-        <section class="about-edge">
+       <section class="about-edge">
             <div class="container">
                 <div class="about-edge__title">
                     <h2>
@@ -92,7 +92,7 @@
                 </div>
             </div>
         </section>
-        <section class="about-all">
+         <section class="about-all">
             <div class="container">
                 <div class="about-all__title">
                     <h2>
@@ -392,6 +392,44 @@
                 </div>
             </div>
         </section>
+        <section class="main-form">
+            <div class="container">
+                <div class="main-form__title">
+                    <h2>
+                        Задать вопрос
+                    </h2>
+                </div>
+                <div class="main-form__form">
+                    <form action="#">
+                        <label>
+                            <p>
+                                Оставьте заявку с вопросом или предложением!
+                            </p>
+                        </label>
+                        <label>
+                            <input type="text" placeholder="Ваше Имя">
+                        </label>
+                        <label>
+                            <input placeholder="Телефон" type="text" data-format="+ * (***) ***-**-**" data-mask="Телефон">
+                        </label>
+                        <label class="form-data">
+                            <p>
+                                Когда с вами удобно связаться?
+                            </p>
+                            <select name="#" id="#">
+                                <option value="">Утром с 9:00 до 12:00</option>
+                                <option value="">Днём с 12:00 до 16:00</option>
+                                <option value="">Вечером с 16:00 до 20:00</option>
+                            </select>
+                        </label>
+                        <label class="pp">
+                            <input type="checkbox" > <span>Согласен на обработку персональных данных</span>
+                        </label>
+                        <button type="submit">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
     <script>
         let parallaxElem = document.querySelectorAll('.parallax');
@@ -447,6 +485,48 @@
             });
         }
     }
+    function doFormat(x, pattern, mask) {
+  var strippedValue = x.replace(/[^0-9]/g, "");
+  var chars = strippedValue.split('');
+  var count = 0;
+
+  var formatted = '';
+  for (var i=0; i<pattern.length; i++) {
+    const c = pattern[i];
+    if (chars[count]) {
+      if (/\*/.test(c)) {
+        formatted += chars[count];
+        count++;
+      } else {
+        formatted += c;
+      }
+    } else if (mask) {
+      if (mask.split('')[i])
+        formatted += mask.split('')[i];
+    }
+  }
+  return formatted;
+}
+
+document.querySelectorAll('[data-mask]').forEach(function(e) {
+  function format(elem) {
+    const val = doFormat(elem.value, elem.getAttribute('data-format'));
+    elem.value = doFormat(elem.value, elem.getAttribute('data-format'), elem.getAttribute('data-mask'));
+    
+    if (elem.createTextRange) {
+      var range = elem.createTextRange();
+      range.move('character', val.length);
+      range.select();
+    } else if (elem.selectionStart) {
+      elem.focus();
+      elem.setSelectionRange(val.length, val.length);
+    }
+  }
+  e.addEventListener('keyup', function() {
+    format(e);
+  });
+  format(e)
+});
     </script>
 </body>
 </html>

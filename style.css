@@ -439,7 +439,8 @@ template {
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1300px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
@@ -517,6 +518,7 @@ template {
 .about-all {
   padding: 40px 0;
   font-family: "Rubik", sans-serif;
+  overflow: hidden;
 }
 
 .about-all__title {
@@ -849,5 +851,300 @@ template {
   font-size: 18px;
   padding-right: 30px;
   position: relative;
+}
+
+.main-form {
+  padding: 40px 0;
+}
+
+.main-form__title {
+  margin-bottom: 50px;
+  font-family: "Rubik", sans-serif;
+}
+
+.main-form__title h2 {
+  font-size: 32px;
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.main-form__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.main-form__form form {
+  max-width: 640px;
+  padding: 30px 20px;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 0px 15px -5px rgba(51, 58, 64, 0.2);
+          box-shadow: 0px 0px 15px -5px rgba(51, 58, 64, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Rubik", sans-serif;
+}
+
+.main-form__form form label {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.main-form__form form label:first-child p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 24px;
+  padding-right: 20px;
+}
+
+.main-form__form form label input {
+  padding: 15px 15px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 500;
+  font-size: 18px;
+  color: #dda704;
+  border: none;
+  border-bottom: 1px solid #aa8105;
+  border-radius: 10px;
+  -webkit-transition: .15s ease-in-out;
+  -o-transition: .15s ease-in-out;
+  transition: .15s ease-in-out;
+}
+
+.main-form__form form label input::-webkit-input-placeholder {
+  color: #dda704c0;
+}
+
+.main-form__form form label input:-ms-input-placeholder {
+  color: #dda704c0;
+}
+
+.main-form__form form label input::-ms-input-placeholder {
+  color: #dda704c0;
+}
+
+.main-form__form form label input::placeholder {
+  color: #dda704c0;
+}
+
+.main-form__form form label input:focus {
+  outline: none;
+  -webkit-box-shadow: 0px -5px 10px 0px rgba(184, 162, 0, 0.15) inset;
+          box-shadow: 0px -5px 10px 0px rgba(184, 162, 0, 0.15) inset;
+}
+
+.main-form__form form label.form-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.main-form__form form label.form-data p {
+  margin-right: 15px;
+  font-weight: 500;
+  font-size: 18px;
+  padding-left: 15px;
+}
+
+.main-form__form form label.form-data select {
+  border: 1px solid #dda704;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.main-form__form form label.pp {
+  display: block;
+  padding-left: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main-form__form form label.pp input {
+  display: inline;
+  width: auto;
+  margin-right: 10px;
+}
+
+.main-form__form form label.pp span {
+  display: inline;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.main-form__form form button[type=submit] {
+  padding: 15px 15px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #ffcc33;
+  border: none;
+  border-radius: 15px;
+  -webkit-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+.main-form__form form button[type=submit]:hover {
+  -webkit-transform: scale(1.02);
+      -ms-transform: scale(1.02);
+          transform: scale(1.02);
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .about-page {
+    padding: 60px 0;
+  }
+  .about-page__title {
+    margin-bottom: 30px;
+  }
+  .about-page__title h1 {
+    font-size: 32px;
+  }
+  .about-page__text p {
+    font-size: 18px;
+  }
+  .about-all__title h2 {
+    font-size: 32px;
+  }
+  .about-all__body {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .about-all__item {
+    width: 49%;
+    margin-right: 2%;
+  }
+  .about-all__item:nth-child(3n+3) {
+    margin-right: 2%;
+  }
+  .about-all__item:nth-child(2n+2) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 960px) {
+  .about-dev__title h2 {
+    font-size: 32px;
+  }
+  .about-dev__card {
+    width: 70%;
+    margin-right: 30px;
+  }
+  .about-dev__tab {
+    width: 57%;
+  }
+  .about-dev__btn {
+    font-size: 18px;
+  }
+  .about-dev__btn span::before, .about-dev__btn span::after {
+    top: 10px;
+  }
+  .dev-info h4 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-edge {
+    padding: 30px 0;
+  }
+  .about-edge__title h2 {
+    font-size: 32px;
+  }
+  .about-edge__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-edge__card {
+    margin-bottom: 15px;
+    max-width: 500px;
+    width: 100%;
+  }
+  .about-all__item {
+    width: 100%;
+    margin-right: 0;
+  }
+  .about-all__item:nth-child(3n+3) {
+    margin-right: 0;
+  }
+  .about-dev__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-dev__title h2 {
+    font-size: 28px;
+  }
+  .about-dev__card {
+    margin-bottom: 20px;
+    margin-right: 0;
+    max-width: none;
+    width: 100%;
+  }
+  .about-dev__info {
+    width: 100%;
+  }
+  .about-dev__tab {
+    width: 100%;
+  }
+  .dev-card__name {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  .dev-card__text p {
+    font-size: 16px;
+  }
+  .dev-info__title h4 {
+    font-size: 24px;
+  }
+  .main-form__title h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  .main-form__form form {
+    padding: 25px 10px;
+  }
+  .main-form__form form label:first-child p {
+    font-size: 18px;
+  }
+  .main-form__form form label input {
+    font-size: 16px;
+  }
+  .main-form__form form label.form-data {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-form__form form label.form-data p {
+    padding-left: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
